@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { AgoricProvider, ConnectWalletButton } from '@agoric/react-components';
+import { wallets } from 'cosmos-kit';
+import { ThemeProvider, useTheme } from '@interchain-ui/react';
+import './App.css';
+import '@agoric/react-components/dist/style.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const { themeClass } = useTheme();
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <ThemeProvider>
+      <div className={themeClass}>
+        <AgoricProvider
+          wallets={wallets.extension}
+          defaultNetworkConfig={{
+            testChain: {
+              chainId: 'agoriclocal',
+              chainName: 'agoric-local',
+            },
+            apis: {
+              rest: ['http://localhost:1317'],
+              rpc: ['http://localhost:26657'],
+            },
+          }}
+        >
+          <h1>Agoric UI Tutorial</h1>
+          <ConnectWalletButton />
+        </AgoricProvider>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
