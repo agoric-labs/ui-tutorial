@@ -238,6 +238,17 @@
     react "18.2.0"
     react-dom "18.2.0"
 
+"@agoric/rpc@0.9.1-dev-1329752.0":
+  version "0.9.1-dev-1329752.0"
+  resolved "https://registry.yarnpkg.com/@agoric/rpc/-/rpc-0.9.1-dev-1329752.0.tgz#e6692dce66bb0a4c7a17f5d21b9024dade717c3f"
+  integrity sha512-uIESAWaWFI554Ud1Tn1FzOPdPIW3hNq0PzrE84XlYLqPhk6AHnZxCNJf4ITcUreyBNMX3sv164fUN7Pq93azwQ==
+  dependencies:
+    "@endo/marshal" "^0.8.9"
+    axios "^1.6.2"
+    axios-retry "^4.0.0"
+    vite "^4.3.2"
+    vite-tsconfig-paths "^4.2.0"
+
 "@agoric/rpc@0.9.1-dev-585b47d.0+585b47d":
   version "0.9.1-dev-585b47d.0"
   resolved "https://registry.yarnpkg.com/@agoric/rpc/-/rpc-0.9.1-dev-585b47d.0.tgz#fd4dcccc5d49500ca10cf79c57c9784c8d64b0cf"

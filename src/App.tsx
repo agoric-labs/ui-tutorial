@@ -4,6 +4,7 @@ import { ThemeProvider, useTheme } from '@interchain-ui/react';
 import Purses from './Purses';
 import './App.css';
 import '@agoric/react-components/dist/style.css';
+import Trade from './Trade';
 
 function App() {
   const { themeClass } = useTheme();
@@ -24,6 +25,7 @@ function App() {
           }}
         >
           <h1>Agoric UI Tutorial</h1>
+          <Trade />
           <ConnectWalletButton />
           <Purses />
         </AgoricProvider>

@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+.trade {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #171717;
+  border-radius: 24px;
+  margin-bottom: 16px;
+}
