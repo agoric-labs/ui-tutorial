@@ -5,6 +5,7 @@ import { stringifyAmountValue } from '@agoric/web-components';
 const Purses = () => {
   const { walletConnection } = useAgoric();
   const istPurse = usePurse('IST');
+  const itemsPurse = usePurse('Item');
 
   return (
     <div className="card">
@@ -16,13 +17,28 @@ const Purses = () => {
             {istPurse ? (
               stringifyAmountValue(
                 istPurse.currentAmount,
-                // @ts-expect-error displayInfo missing type
                 istPurse.displayInfo.assetKind,
-                // @ts-expect-error displayInfo missing type
                 istPurse.displayInfo.decimalPlaces
               )
             ) : (
               <i>Fetching balance...</i>
+            )}
+          </div>
+          <div>
+            <b>Items: </b>
+            {itemsPurse ? (
+              <ul style={{ marginTop: 0, textAlign: 'left' }}>
+                {itemsPurse.currentAmount.value.payload.map(
+                  // @ts-expect-error ignore 'any' type
+                  ([name, number]) => (
+                    <li key={name}>
+                      {String(number)} {name}
+                    </li>
+                  )
+                )}
+              </ul>
+            ) : (
+              'None'
             )}
           </div>
         </div>
