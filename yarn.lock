@@ -82,7 +82,7 @@
     "@endo/promise-kit" "0.2.56"
     node-fetch "^2.6.0"
 
-"@agoric/cosmic-proto@^0.3.0":
+"@agoric/cosmic-proto@0.3.0", "@agoric/cosmic-proto@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@agoric/cosmic-proto/-/cosmic-proto-0.3.0.tgz#c9d31d3946c91fbb1630f89d8ba63a662bcdacc5"
   integrity sha512-cIunby6gs53sGkHx3ALraREbfVQXvsIcObMjQQ0/tZt5HVqwoS7Y1Qj1Xl0ZZvqE8B1Zyk7QMDj829mbTII+9g==
@@ -104,6 +104,22 @@
     "@endo/marshal" "^0.8.5"
     "@endo/nat" "^4.1.27"
     "@endo/promise-kit" "^0.2.56"
+
+"@agoric/ertp@^0.16.3-dev-e2e36cc.0":
+  version "0.16.3-u14.0"
+  resolved "https://registry.yarnpkg.com/@agoric/ertp/-/ertp-0.16.3-u14.0.tgz#842470a82a5c34b984059f46efaa915e527beee0"
+  integrity sha512-/63GDygaB2ble+0xwPk50uMnMU6oSH56aCnWTKz4T4sjtfmHs8aTCeHe/p3wM4IvHKFBACfuDg1QTYYV4em8hA==
+  dependencies:
+    "@agoric/assert" "^0.6.1-u11wf.0"
+    "@agoric/notifier" "^0.6.3-u14.0"
+    "@agoric/store" "^0.9.3-u14.0"
+    "@agoric/swingset-vat" "^0.32.3-u14.0"
+    "@agoric/vat-data" "^0.5.3-u14.0"
+    "@endo/eventual-send" "0.17.2"
+    "@endo/far" "0.2.18"
+    "@endo/marshal" "0.8.5"
+    "@endo/nat" "4.1.27"
+    "@endo/promise-kit" "0.2.56"
 
 "@agoric/governance@^0.10.3":
   version "0.10.3"
@@ -530,6 +546,22 @@
     babel-eslint "^10.0.3"
     eslint-plugin-eslint-comments "^3.1.2"
     import-meta-resolve "^2.2.1"
+
+"@agoric/web-components@0.15.1-dev-1329752.0":
+  version "0.15.1-dev-1329752.0"
+  resolved "https://registry.yarnpkg.com/@agoric/web-components/-/web-components-0.15.1-dev-1329752.0.tgz#e54d95349200ca88d9c1e85ad9fb6809381add20"
+  integrity sha512-Q7rvqkg8d8qQ/02ieixiY56W+feSG+bISuj3GjX4ZmkTiwAIyLMId12MQ3Sne1itWDm1uvrmKJGOXQ3/5fWc4Q==
+  dependencies:
+    "@agoric/assert" "^0.6.0"
+    "@agoric/cache" "^0.3.2"
+    "@agoric/casting" "^0.4.3-u13.0"
+    "@agoric/cosmic-proto" "0.3.0"
+    "@agoric/ertp" "^0.16.3-dev-e2e36cc.0"
+    "@agoric/notifier" "^0.6.3-dev-8c14632.0"
+    "@agoric/smart-wallet" "^0.5.3"
+    "@endo/captp" "^3.1.1"
+    "@endo/eventual-send" "^0.17.5"
+    "@endo/marshal" "^0.8.5"
 
 "@agoric/web-components@0.15.1-dev-585b47d.0+585b47d":
   version "0.15.1-dev-585b47d.0"
