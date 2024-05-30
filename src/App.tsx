@@ -12,7 +12,7 @@ function App() {
       <div className={themeClass}>
         <AgoricProvider
           wallets={wallets.extension}
-          defaultNetworkConfig={{
+          agoricNetworkConfigs={[{
             testChain: {
               chainId: 'agoriclocal',
               chainName: 'agoric-local',
@@ -21,7 +21,8 @@ function App() {
               rest: ['http://localhost:1317'],
               rpc: ['http://localhost:26657'],
             },
-          }}
+          }]}
+          defaultChainName="agoric-local"
         >
           <h1>Agoric UI Tutorial</h1>
           <ConnectWalletButton />
